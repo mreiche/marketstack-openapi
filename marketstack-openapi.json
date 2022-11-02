@@ -64,7 +64,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -76,7 +76,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -185,7 +185,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -197,7 +197,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -317,7 +317,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -329,7 +329,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -452,7 +452,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -464,7 +464,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -587,7 +587,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -599,7 +599,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -733,7 +733,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -745,7 +745,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -845,7 +845,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -857,7 +857,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -957,7 +957,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -969,7 +969,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -1340,7 +1340,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -1352,7 +1352,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -1590,7 +1590,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -1602,7 +1602,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      },
@@ -1817,7 +1817,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -1829,7 +1829,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      }
@@ -1907,7 +1907,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_from",
       "in": "query"
      },
@@ -1919,7 +1919,7 @@
        "type": "string",
        "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
       },
-      "example": "2022-11-02T21:13:59.618978",
+      "example": "2022-11-02T21:18:46.592504",
       "name": "date_to",
       "in": "query"
      }
@@ -2082,6 +2082,44 @@
      }
     }
    },
+   "Error": {
+    "title": "Error",
+    "required": [
+     "code",
+     "message"
+    ],
+    "type": "object",
+    "properties": {
+     "code": {
+      "$ref": "#/components/schemas/ErrorCode"
+     },
+     "message": {
+      "title": "Message",
+      "type": "string"
+     },
+     "context": {
+      "title": "Context",
+      "type": "object"
+     }
+    }
+   },
+   "ErrorCode": {
+    "title": "ErrorCode",
+    "enum": [
+     "invalid_access_key",
+     "missing_access_key",
+     "function_access_restricted",
+     "inactive_user",
+     "https_access_restricted",
+     "invalid_api_function",
+     "404_not_found",
+     "usage_limit_reached",
+     "rate_limit_reached",
+     "internal_error",
+     "validation_error"
+    ],
+    "description": "An enumeration."
+   },
    "Exchange": {
     "title": "Exchange",
     "required": [
@@ -2241,6 +2279,9 @@
       "items": {
        "$ref": "#/components/schemas/Currency"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2257,6 +2298,9 @@
       "items": {
        "$ref": "#/components/schemas/Dividend"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2273,6 +2317,9 @@
       "items": {
        "$ref": "#/components/schemas/EodPrice"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2289,6 +2336,9 @@
       "items": {
        "$ref": "#/components/schemas/IntervalPrice"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2305,6 +2355,9 @@
       "items": {
        "$ref": "#/components/schemas/Split"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2321,6 +2374,9 @@
       "items": {
        "$ref": "#/components/schemas/Ticker"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2337,6 +2393,9 @@
       "items": {
        "$ref": "#/components/schemas/Timezone"
       }
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },
@@ -2349,6 +2408,9 @@
      },
      "data": {
       "$ref": "#/components/schemas/TickerSymbol"
+     },
+     "error": {
+      "$ref": "#/components/schemas/Error"
      }
     }
    },

@@ -39,7 +39,7 @@ class Error(BaseModel):
 class Response(GenericModel, Generic[R]):
     pagination: Pagination | None
     data: R | None
-    #error: Error | None
+    error: Error | None
 
 
 class Split(BaseModel):
