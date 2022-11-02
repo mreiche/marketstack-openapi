@@ -1,0 +1,2515 @@
+{
+ "openapi": "3.0.2",
+ "info": {
+  "title": "Marketstack OpenAPI",
+  "description": "Inofficial Marketstack OpenAPI definition",
+  "version": "1.0"
+ },
+ "paths": {
+  "/eod": {
+   "get": {
+    "tags": [
+     "eod"
+    ],
+    "summary": "Query",
+    "operationId": "eod",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/eod/latest": {
+   "get": {
+    "tags": [
+     "eod"
+    ],
+    "summary": "Latest",
+    "operationId": "eod_latest",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/eod/{date}": {
+   "get": {
+    "tags": [
+     "eod"
+    ],
+    "summary": "Date",
+    "operationId": "eod_date",
+    "parameters": [
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": true,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "name": "date",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/intraday": {
+   "get": {
+    "tags": [
+     "intraday"
+    ],
+    "summary": "Query",
+    "operationId": "intraday",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Intraday interval",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Interval"
+        }
+       ]
+      },
+      "example": "5min",
+      "name": "interval",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/intraday/latest": {
+   "get": {
+    "tags": [
+     "intraday"
+    ],
+    "summary": "Latest",
+    "operationId": "intraday_latest",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Intraday interval",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Interval"
+        }
+       ]
+      },
+      "example": "5min",
+      "name": "interval",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/intraday/{date}": {
+   "get": {
+    "tags": [
+     "intraday"
+    ],
+    "summary": "Date",
+    "operationId": "intraday_date",
+    "parameters": [
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": true,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "name": "date",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Intraday interval",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Interval"
+        }
+       ]
+      },
+      "example": "5min",
+      "name": "interval",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/splits": {
+   "get": {
+    "tags": [
+     "splits"
+    ],
+    "summary": "Query",
+    "operationId": "splits",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Split__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/dividends": {
+   "get": {
+    "tags": [
+     "dividends"
+    ],
+    "summary": "Query",
+    "operationId": "dividends",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Comma-separated symbols list",
+       "type": "string"
+      },
+      "example": "AAPL,AMZN",
+      "name": "symbols",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Dividend__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/currencies": {
+   "get": {
+    "tags": [
+     "currencies"
+    ],
+    "summary": "Query",
+    "operationId": "currencies",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Currency__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/timezones": {
+   "get": {
+    "tags": [
+     "timezones"
+    ],
+    "summary": "Query",
+    "operationId": "timezones",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Timezone__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Query",
+    "operationId": "tickers",
+    "parameters": [
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Search string",
+       "type": "string"
+      },
+      "name": "search",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Ticker__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol",
+    "operationId": "ticker_symbol",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Ticker"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/eod": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Eod",
+    "operationId": "ticker_symbol_eod",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_TickerSymbol_"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/eod/latest": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Eod Latest",
+    "operationId": "ticker_symbol_eod_latest",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/EodPrice"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/eod/{date}": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Eod Date",
+    "operationId": "ticker_symbol_eod_date",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": true,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "name": "date",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/intraday": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Intraday",
+    "operationId": "ticker_symbol_intraday",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Exchange MIC",
+       "type": "string"
+      },
+      "name": "exchange",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Intraday interval",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Interval"
+        }
+       ]
+      },
+      "example": "5min",
+      "name": "interval",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Limit",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "limit",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Offset",
+       "minimum": 1.0,
+       "type": "integer"
+      },
+      "example": 10,
+      "name": "offset",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_TickerSymbol_"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/intraday/latest": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Intraday Latest",
+    "operationId": "ticker_symbol_intraday_latest",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/IntervalPrice"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/intraday/{date}": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Intraday Date",
+    "operationId": "ticker_symbol_intraday_date",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": true,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "name": "date",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/splits": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Splits",
+    "operationId": "ticker_symbol_splits",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Split__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/tickers/{symbol}/dividends": {
+   "get": {
+    "tags": [
+     "tickers"
+    ],
+    "summary": "Symbol Dividends",
+    "operationId": "ticker_symbol_dividends",
+    "parameters": [
+     {
+      "required": true,
+      "schema": {
+       "title": "Symbol",
+       "type": "string"
+      },
+      "example": "AAPL",
+      "name": "symbol",
+      "in": "path"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "API access key",
+       "type": "string"
+      },
+      "name": "access_key",
+      "in": "query"
+     },
+     {
+      "required": false,
+      "schema": {
+       "title": "Date/time sort",
+       "allOf": [
+        {
+         "$ref": "#/components/schemas/Sort"
+        }
+       ]
+      },
+      "example": "DESC",
+      "name": "sort",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_from",
+      "in": "query"
+     },
+     {
+      "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+      "required": false,
+      "schema": {
+       "title": "Timestamp",
+       "type": "string",
+       "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+      },
+      "example": "2022-11-02T21:13:59.618978",
+      "name": "date_to",
+      "in": "query"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Response_List_models.Dividend__"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "Currency": {
+    "title": "Currency",
+    "required": [
+     "code",
+     "name"
+    ],
+    "type": "object",
+    "properties": {
+     "code": {
+      "title": "Code",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "symbol_native": {
+      "title": "Symbol Native",
+      "type": "string"
+     }
+    }
+   },
+   "Dividend": {
+    "title": "Dividend",
+    "required": [
+     "date",
+     "symbol",
+     "dividend"
+    ],
+    "type": "object",
+    "properties": {
+     "date": {
+      "title": "Date",
+      "type": "string"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "dividend": {
+      "title": "Dividend",
+      "type": "number"
+     }
+    }
+   },
+   "EodPrice": {
+    "title": "EodPrice",
+    "required": [
+     "date",
+     "symbol",
+     "open",
+     "low",
+     "high",
+     "exchange",
+     "split_factor",
+     "dividend",
+     "adj_open",
+     "adj_close",
+     "adj_high",
+     "adj_low",
+     "adj_volume"
+    ],
+    "type": "object",
+    "properties": {
+     "date": {
+      "title": "Date",
+      "type": "string",
+      "format": "date-time"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "volume": {
+      "title": "Volume",
+      "type": "number"
+     },
+     "open": {
+      "title": "Open",
+      "type": "number"
+     },
+     "close": {
+      "title": "Close",
+      "type": "number"
+     },
+     "low": {
+      "title": "Low",
+      "type": "number"
+     },
+     "high": {
+      "title": "High",
+      "type": "number"
+     },
+     "exchange": {
+      "title": "Exchange",
+      "type": "string"
+     },
+     "split_factor": {
+      "title": "Split Factor",
+      "type": "number"
+     },
+     "dividend": {
+      "title": "Dividend",
+      "type": "number"
+     },
+     "adj_open": {
+      "title": "Adj Open",
+      "type": "number"
+     },
+     "adj_close": {
+      "title": "Adj Close",
+      "type": "number"
+     },
+     "adj_high": {
+      "title": "Adj High",
+      "type": "number"
+     },
+     "adj_low": {
+      "title": "Adj Low",
+      "type": "number"
+     },
+     "adj_volume": {
+      "title": "Adj Volume",
+      "type": "number"
+     }
+    }
+   },
+   "Exchange": {
+    "title": "Exchange",
+    "required": [
+     "name",
+     "acronym",
+     "mic",
+     "country",
+     "country_code",
+     "city",
+     "website"
+    ],
+    "type": "object",
+    "properties": {
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "acronym": {
+      "title": "Acronym",
+      "type": "string"
+     },
+     "mic": {
+      "title": "Mic",
+      "type": "string"
+     },
+     "country": {
+      "title": "Country",
+      "type": "string"
+     },
+     "country_code": {
+      "title": "Country Code",
+      "type": "string"
+     },
+     "city": {
+      "title": "City",
+      "type": "string"
+     },
+     "website": {
+      "title": "Website",
+      "type": "string"
+     }
+    }
+   },
+   "HTTPValidationError": {
+    "title": "HTTPValidationError",
+    "type": "object",
+    "properties": {
+     "detail": {
+      "title": "Detail",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      }
+     }
+    }
+   },
+   "Interval": {
+    "title": "Interval",
+    "enum": [
+     "1min",
+     "5min",
+     "10min",
+     "30min",
+     "1hour",
+     "3hour",
+     "6hour",
+     "12hour",
+     "24hour"
+    ],
+    "description": "An enumeration."
+   },
+   "IntervalPrice": {
+    "title": "IntervalPrice",
+    "required": [
+     "date",
+     "symbol",
+     "open",
+     "low",
+     "high",
+     "exchange"
+    ],
+    "type": "object",
+    "properties": {
+     "date": {
+      "title": "Date",
+      "type": "string",
+      "format": "date-time"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "volume": {
+      "title": "Volume",
+      "type": "number"
+     },
+     "open": {
+      "title": "Open",
+      "type": "number"
+     },
+     "close": {
+      "title": "Close",
+      "type": "number"
+     },
+     "low": {
+      "title": "Low",
+      "type": "number"
+     },
+     "high": {
+      "title": "High",
+      "type": "number"
+     },
+     "exchange": {
+      "title": "Exchange",
+      "type": "string"
+     }
+    }
+   },
+   "Pagination": {
+    "title": "Pagination",
+    "required": [
+     "limit",
+     "offset",
+     "count",
+     "total"
+    ],
+    "type": "object",
+    "properties": {
+     "limit": {
+      "title": "Limit",
+      "type": "integer"
+     },
+     "offset": {
+      "title": "Offset",
+      "type": "integer"
+     },
+     "count": {
+      "title": "Count",
+      "type": "integer"
+     },
+     "total": {
+      "title": "Total",
+      "type": "integer"
+     }
+    }
+   },
+   "Response_List_models.Currency__": {
+    "title": "Response[List[models.Currency]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Currency"
+      }
+     }
+    }
+   },
+   "Response_List_models.Dividend__": {
+    "title": "Response[List[models.Dividend]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Dividend"
+      }
+     }
+    }
+   },
+   "Response_List_models.EodPrice__": {
+    "title": "Response[List[models.EodPrice]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/EodPrice"
+      }
+     }
+    }
+   },
+   "Response_List_models.IntervalPrice__": {
+    "title": "Response[List[models.IntervalPrice]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/IntervalPrice"
+      }
+     }
+    }
+   },
+   "Response_List_models.Split__": {
+    "title": "Response[List[models.Split]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Split"
+      }
+     }
+    }
+   },
+   "Response_List_models.Ticker__": {
+    "title": "Response[List[models.Ticker]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Ticker"
+      }
+     }
+    }
+   },
+   "Response_List_models.Timezone__": {
+    "title": "Response[List[models.Timezone]]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Timezone"
+      }
+     }
+    }
+   },
+   "Response_TickerSymbol_": {
+    "title": "Response[TickerSymbol]",
+    "type": "object",
+    "properties": {
+     "pagination": {
+      "$ref": "#/components/schemas/Pagination"
+     },
+     "data": {
+      "$ref": "#/components/schemas/TickerSymbol"
+     }
+    }
+   },
+   "Sort": {
+    "title": "Sort",
+    "enum": [
+     "ASC",
+     "DESC"
+    ],
+    "description": "An enumeration."
+   },
+   "Split": {
+    "title": "Split",
+    "required": [
+     "date",
+     "symbol",
+     "split_factor"
+    ],
+    "type": "object",
+    "properties": {
+     "date": {
+      "title": "Date",
+      "type": "string"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "split_factor": {
+      "title": "Split Factor",
+      "type": "number"
+     }
+    }
+   },
+   "Ticker": {
+    "title": "Ticker",
+    "required": [
+     "name",
+     "symbol",
+     "stock_exchange"
+    ],
+    "type": "object",
+    "properties": {
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "stock_exchange": {
+      "$ref": "#/components/schemas/Exchange"
+     },
+     "timezone": {
+      "$ref": "#/components/schemas/Timezone"
+     }
+    }
+   },
+   "TickerSymbol": {
+    "title": "TickerSymbol",
+    "required": [
+     "name",
+     "symbol",
+     "has_intraday",
+     "has_eod"
+    ],
+    "type": "object",
+    "properties": {
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "symbol": {
+      "title": "Symbol",
+      "type": "string"
+     },
+     "has_intraday": {
+      "title": "Has Intraday",
+      "type": "boolean"
+     },
+     "has_eod": {
+      "title": "Has Eod",
+      "type": "boolean"
+     },
+     "coountry": {
+      "title": "Coountry",
+      "type": "string"
+     },
+     "eod": {
+      "title": "Eod",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/EodPrice"
+      }
+     },
+     "intraday": {
+      "title": "Intraday",
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/IntervalPrice"
+      }
+     }
+    }
+   },
+   "Timezone": {
+    "title": "Timezone",
+    "required": [
+     "timezone",
+     "abbr",
+     "abbr_dst"
+    ],
+    "type": "object",
+    "properties": {
+     "timezone": {
+      "title": "Timezone",
+      "type": "string"
+     },
+     "abbr": {
+      "title": "Abbr",
+      "type": "string"
+     },
+     "abbr_dst": {
+      "title": "Abbr Dst",
+      "type": "string"
+     }
+    }
+   },
+   "ValidationError": {
+    "title": "ValidationError",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "type": "object",
+    "properties": {
+     "loc": {
+      "title": "Location",
+      "type": "array",
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      }
+     },
+     "msg": {
+      "title": "Message",
+      "type": "string"
+     },
+     "type": {
+      "title": "Error Type",
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}
