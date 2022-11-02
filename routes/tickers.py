@@ -1,9 +1,8 @@
 from typing import List
 
 from fastapi import APIRouter
-from pydantic import BaseModel
 
-from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path
+from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path, offset_query
 
 router = APIRouter(prefix="/tickers", tags=["tickers"])
 
@@ -14,7 +13,7 @@ def query(
     exchange: str = exchange_query,
     search: str = search_query,
     limit: int = limit_query,
-    offset: int = limit_query,
+    offset: int = offset_query,
 ):
     pass
 
@@ -27,19 +26,13 @@ def symbol(
     pass
 
 
-class TickerSymbol(BaseModel):
-    name: str
-    symbol: str
-    has_intraday: bool
-    has_eod: bool
-    coountry: str | None
-    eod: List[EodPrice] | None
-    intraday: List[IntervalPrice] | None
+class TickerEod(Ticker):
+    eod: List[EodPrice]
 
 
 @router.get(
     "/{symbol}/eod",
-    response_model=Response[TickerSymbol],
+    response_model=Response[TickerEod],
     operation_id="ticker_symbol_eod"
 )
 def symbol_eod(
@@ -50,7 +43,7 @@ def symbol_eod(
     date_from: str = date_query,
     date_to: str = date_query,
     limit: int = limit_query,
-    offset: int = limit_query,
+    offset: int = offset_query,
 ):
     pass
 
@@ -80,9 +73,13 @@ def symbol_eod_date(
     pass
 
 
+class TickerIntraday(Ticker):
+    intraday: List[IntervalPrice]
+
+
 @router.get(
     "/{symbol}/intraday",
-    response_model=Response[TickerSymbol],
+    response_model=Response[TickerIntraday],
     operation_id="ticker_symbol_intraday"
 )
 def symbol_intraday(
@@ -94,7 +91,7 @@ def symbol_intraday(
     date_from: str = date_query,
     date_to: str = date_query,
     limit: int = limit_query,
-    offset: int = limit_query,
+    offset: int = offset_query,
 ):
     pass
 

@@ -2,7 +2,7 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, limit_query, Response, Currency
+from models import access_key_query, limit_query, Response, Currency, offset_query
 
 router = APIRouter(prefix="/currencies", tags=["currencies"])
 
@@ -11,6 +11,6 @@ router = APIRouter(prefix="/currencies", tags=["currencies"])
 def query(
     access_key: str = access_key_query,
     limit: int = limit_query,
-    offset: int = limit_query,
+    offset: int = offset_query,
 ):
     pass

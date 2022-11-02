@@ -10,6 +10,7 @@ from routes.dividends import router as dividends
 from routes.currencies import router as currencies
 from routes.timezones import router as timezones
 from routes.tickers import router as tickers
+from routes.exchanges import router as exchanges
 
 app.include_router(eod)
 app.include_router(intraday)
@@ -18,17 +19,17 @@ app.include_router(dividends)
 app.include_router(currencies)
 app.include_router(timezones)
 app.include_router(tickers)
-
+app.include_router(exchanges)
 
 openapi_schema = get_openapi(
     title="Marketstack OpenAPI",
     version="1.0",
-    description="Inofficial Marketstack OpenAPI definition",
+    description="Inofficial Marketstack OpenAPI spec",
     routes=app.routes,
 )
 
 with open("marketstack-openapi.json", "w") as file:
-    json.dump(openapi_schema, file, indent=1)
+    json.dump(openapi_schema, file, indent=2)
 
 #
 # def custom_openapi():

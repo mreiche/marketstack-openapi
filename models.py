@@ -63,6 +63,7 @@ class IntervalPrice(BaseModel):
     low: float
     high: float
     exchange: str
+    last: float | None
 
 
 class EodPrice(IntervalPrice):
@@ -113,6 +114,8 @@ class Exchange(BaseModel):
     country_code: str
     city: str
     website: str
+    currency: Currency | None
+    timezone: Timezone | None
 
 
 class Ticker(BaseModel):
@@ -120,19 +123,23 @@ class Ticker(BaseModel):
     symbol: str
     stock_exchange: Exchange
     timezone: Timezone | None
+    has_intraday: bool
+    has_eod: bool
 
 
 date_description = "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
 
 reference_time = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
-formatted_reference_time = reference_time.utcnow().isoformat()
-symbol_path = Path(None, title="Symbol", example="AAPL")
-date_path = Path(formatted_reference_time, title="Timestamp", description=date_description)
+formatted_reference_time = reference_time.isoformat()+"+0000"
+symbol_path = Path(title="Symbol", example="AAPL")
+date_path = Path(title="Timestamp", description=date_description, example=formatted_reference_time)
 symbols_query = Query(None, title="Comma-separated symbols list", example="AAPL,AMZN")
 date_query = Query(None, title="Timestamp", example=formatted_reference_time, description=date_description)
-access_key_query = Query(None, title="API access key")
-exchange_query = Query(None, title="Exchange MIC")
+access_key_query = Query(title="API access key")
+exchange_query = Query(None, title="Exchange MIC", example="XNAS")
 search_query = Query(None, title="Search string")
 interval_query = Query(None, title="Intraday interval", example=Interval.min5.value)
-sort_query = Query(None, title="Date/time sort", example=Sort.DESC.value)
-limit_query = Query(None, ge=1, example=10)
+sort_query = Query(None, title="Date/time sort order", example=Sort.DESC.value)
+limit_query = Query(None, ge=1, example=10, le=1000)
+offset_query = Query(None, ge=0, example=10)
+exchange_path = Path(title="Exchange MIC", example="XNAS")
