@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Generic, List, TypeVar
 
-from fastapi import Path, Query
+from fastapi import Path, Query, status
 from pydantic import BaseModel
 from pydantic.generics import GenericModel
 
@@ -40,6 +40,10 @@ class Response(GenericModel, Generic[R]):
     pagination: Pagination | None
     data: R | None
     error: Error | None
+
+
+class ErrorResponse(BaseModel):
+    error: Error
 
 
 class Split(BaseModel):
@@ -111,7 +115,7 @@ class Exchange(BaseModel):
     acronym: str
     mic: str
     country: str
-    country_code: str
+    country_code: str | None
     city: str
     website: str
     currency: Currency | None
@@ -121,7 +125,7 @@ class Exchange(BaseModel):
 class Ticker(BaseModel):
     name: str
     symbol: str
-    stock_exchange: Exchange
+    stock_exchange: Exchange | None
     timezone: Timezone | None
     has_intraday: bool
     has_eod: bool
@@ -133,7 +137,7 @@ reference_time = datetime.today().replace(hour=0, minute=0, second=0, microsecon
 formatted_reference_time = reference_time.isoformat()+"+0000"
 symbol_path = Path(title="Symbol", example="AAPL")
 date_path = Path(title="Timestamp", description=date_description, example=formatted_reference_time)
-symbols_query = Query(None, title="Comma-separated symbols list", example="AAPL,AMZN")
+symbols_query = Query(title="Comma-separated symbols list", example="AAPL,AMZN")
 date_query = Query(None, title="Timestamp", example=formatted_reference_time, description=date_description)
 access_key_query = Query(title="API access key")
 exchange_query = Query(None, title="Exchange MIC", example="XNAS")
@@ -143,3 +147,9 @@ sort_query = Query(None, title="Date/time sort order", example=Sort.DESC.value)
 limit_query = Query(None, ge=1, example=10, le=1000)
 offset_query = Query(None, ge=0, example=0)
 exchange_path = Path(title="Exchange MIC", example="XNAS")
+
+responses = {
+    status.HTTP_403_FORBIDDEN: {"model": ErrorResponse, "description": "Forbidden"},
+    status.HTTP_404_NOT_FOUND: {"model": ErrorResponse, "description": "Not found"},
+    status.HTTP_429_TOO_MANY_REQUESTS: {"model": ErrorResponse, "description": "Too many requests"},
+}

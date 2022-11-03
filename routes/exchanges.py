@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path, Exchange, exchange_path, symbols_query, offset_query
+from models import access_key_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, IntervalPrice, Interval, interval_query, date_path, Exchange, exchange_path, symbols_query, offset_query
 
 router = APIRouter(prefix="/exchanges", tags=["exchanges"])
 
@@ -13,7 +13,7 @@ def query(
     access_key: str = access_key_query,
     search: str = search_query,
     limit: int = limit_query,
-    offset: int = limit_query,
+    offset: int = offset_query,
 ):
     pass
 
@@ -41,7 +41,7 @@ class ExchangeTickers(Exchange):
     "/{mic}/tickers",
     response_model=Response[ExchangeTickers],
     operation_id="exchange_mic_tickers"
-    )
+)
 def tickers(
     mic: str = exchange_path,
     access_key: str = access_key_query,
@@ -127,6 +127,13 @@ def mic_intraday(
 def mic_intraday_latest(
     mic: str = exchange_path,
     access_key: str = access_key_query,
+    symbols: str = symbols_query,
+    interval: Interval = interval_query,
+    sort: Sort = sort_query,
+    date_from: str = date_query,
+    date_to: str = date_query,
+    limit: int = limit_query,
+    offset: int = offset_query,
 ):
     pass
 
@@ -139,6 +146,13 @@ def mic_intraday_latest(
 def mic_intraday_date(
     mic: str = exchange_path,
     date: str = date_path,
-    access_key: str = access_key_query
+    access_key: str = access_key_query,
+    symbols: str = symbols_query,
+    interval: Interval = interval_query,
+    sort: Sort = sort_query,
+    date_from: str = date_query,
+    date_to: str = date_query,
+    limit: int = limit_query,
+    offset: int = offset_query,
 ):
     pass

@@ -2,7 +2,9 @@ import json
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 
-app = FastAPI()
+from models import responses
+
+app = FastAPI(responses=responses)
 from routes.eod import router as eod
 from routes.intraday import router as intraday
 from routes.splits import router as splits

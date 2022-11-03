@@ -24,7 +24,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -100,7 +100,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -112,6 +112,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -147,7 +177,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -223,7 +253,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -235,6 +265,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -282,7 +342,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -358,7 +418,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -370,6 +430,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -405,7 +495,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -495,7 +585,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -507,6 +597,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -542,7 +662,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -632,7 +752,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -644,6 +764,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -691,7 +841,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -781,7 +931,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -793,6 +943,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -828,7 +1008,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -894,7 +1074,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -906,6 +1086,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.Split__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -941,7 +1151,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -1007,7 +1217,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -1019,6 +1229,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.Dividend__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1072,7 +1312,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -1084,6 +1324,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.Currency__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1137,7 +1407,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -1149,6 +1419,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.Timezone__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1221,7 +1521,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -1233,6 +1533,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.Ticker__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1285,6 +1615,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Ticker"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1396,7 +1756,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -1408,6 +1768,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_TickerEod_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1460,6 +1850,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EodPrice"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1524,6 +1944,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1649,7 +2099,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -1661,6 +2111,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_TickerIntraday_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1713,6 +2193,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/IntervalPrice"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1777,6 +2287,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1871,6 +2411,36 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "422": {
             "description": "Validation Error",
             "content": {
@@ -1961,6 +2531,36 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "422": {
             "description": "Validation Error",
             "content": {
@@ -2016,11 +2616,10 @@
             "required": false,
             "schema": {
               "title": "Offset",
-              "maximum": 1000.0,
-              "minimum": 1.0,
+              "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -2032,6 +2631,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_List_models.Exchange__"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2088,6 +2717,36 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "422": {
             "description": "Validation Error",
             "content": {
@@ -2140,6 +2799,36 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "422": {
             "description": "Validation Error",
             "content": {
@@ -2181,7 +2870,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -2247,7 +2936,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -2259,6 +2948,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_ExchangeEod_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2311,6 +3030,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_ExchangeEod_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2379,6 +3128,36 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "422": {
             "description": "Validation Error",
             "content": {
@@ -2420,7 +3199,7 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
@@ -2500,7 +3279,7 @@
               "minimum": 0.0,
               "type": "integer"
             },
-            "example": 10,
+            "example": 0,
             "name": "offset",
             "in": "query"
           }
@@ -2512,6 +3291,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_ExchangeIntraday_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2555,6 +3364,91 @@
             },
             "name": "access_key",
             "in": "query"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Comma-separated symbols list",
+              "type": "string"
+            },
+            "example": "AAPL,AMZN",
+            "name": "symbols",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Intraday interval",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Interval"
+                }
+              ]
+            },
+            "example": "5min",
+            "name": "interval",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Date/time sort order",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Sort"
+                }
+              ]
+            },
+            "example": "DESC",
+            "name": "sort",
+            "in": "query"
+          },
+          {
+            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+            "required": false,
+            "schema": {
+              "title": "Timestamp",
+              "type": "string",
+              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+            },
+            "example": "2022-11-03T00:00:00+0000",
+            "name": "date_from",
+            "in": "query"
+          },
+          {
+            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+            "required": false,
+            "schema": {
+              "title": "Timestamp",
+              "type": "string",
+              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+            },
+            "example": "2022-11-03T00:00:00+0000",
+            "name": "date_to",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Limit",
+              "maximum": 1000.0,
+              "minimum": 1.0,
+              "type": "integer"
+            },
+            "example": 10,
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Offset",
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "example": 0,
+            "name": "offset",
+            "in": "query"
           }
         ],
         "responses": {
@@ -2564,6 +3458,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_ExchangeIntraday_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2619,6 +3543,91 @@
             },
             "name": "access_key",
             "in": "query"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Comma-separated symbols list",
+              "type": "string"
+            },
+            "example": "AAPL,AMZN",
+            "name": "symbols",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Intraday interval",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Interval"
+                }
+              ]
+            },
+            "example": "5min",
+            "name": "interval",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Date/time sort order",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Sort"
+                }
+              ]
+            },
+            "example": "DESC",
+            "name": "sort",
+            "in": "query"
+          },
+          {
+            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+            "required": false,
+            "schema": {
+              "title": "Timestamp",
+              "type": "string",
+              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+            },
+            "example": "2022-11-03T00:00:00+0000",
+            "name": "date_from",
+            "in": "query"
+          },
+          {
+            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
+            "required": false,
+            "schema": {
+              "title": "Timestamp",
+              "type": "string",
+              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
+            },
+            "example": "2022-11-03T00:00:00+0000",
+            "name": "date_to",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Limit",
+              "maximum": 1000.0,
+              "minimum": 1.0,
+              "type": "integer"
+            },
+            "example": 10,
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Offset",
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "example": 0,
+            "name": "offset",
+            "in": "query"
           }
         ],
         "responses": {
@@ -2628,6 +3637,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Response_ExchangeIntraday_"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2821,6 +3860,18 @@
         ],
         "description": "An enumeration."
       },
+      "ErrorResponse": {
+        "title": "ErrorResponse",
+        "required": [
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          }
+        }
+      },
       "Exchange": {
         "title": "Exchange",
         "required": [
@@ -2828,7 +3879,6 @@
           "acronym",
           "mic",
           "country",
-          "country_code",
           "city",
           "website"
         ],
@@ -2877,7 +3927,6 @@
           "acronym",
           "mic",
           "country",
-          "country_code",
           "city",
           "website",
           "eod"
@@ -2934,7 +3983,6 @@
           "acronym",
           "mic",
           "country",
-          "country_code",
           "city",
           "website",
           "intraday"
@@ -3019,7 +4067,6 @@
           "acronym",
           "mic",
           "country",
-          "country_code",
           "city",
           "website",
           "tickers"
@@ -3439,7 +4486,6 @@
         "required": [
           "name",
           "symbol",
-          "stock_exchange",
           "has_intraday",
           "has_eod"
         ],
@@ -3474,7 +4520,6 @@
         "required": [
           "name",
           "symbol",
-          "stock_exchange",
           "has_intraday",
           "has_eod",
           "eod"
@@ -3517,7 +4562,6 @@
         "required": [
           "name",
           "symbol",
-          "stock_exchange",
           "has_intraday",
           "has_eod",
           "intraday"
