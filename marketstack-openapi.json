@@ -1979,7 +1979,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                  "$ref": "#/components/schemas/EodPrice"
                 }
               }
             }
@@ -3072,6 +3072,16 @@
             },
             "name": "access_key",
             "in": "query"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Comma-separated symbols list",
+              "type": "string"
+            },
+            "example": "AAPL,AMZN",
+            "name": "symbols",
+            "in": "query"
           }
         ],
         "responses": {
@@ -3157,6 +3167,16 @@
             "example": "2022-11-03T00:00:00+0000",
             "name": "date",
             "in": "path"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Comma-separated symbols list",
+              "type": "string"
+            },
+            "example": "AAPL,AMZN",
+            "name": "symbols",
+            "in": "query"
           },
           {
             "required": true,
@@ -3416,15 +3436,6 @@
           {
             "required": true,
             "schema": {
-              "title": "API access key",
-              "type": "string"
-            },
-            "name": "access_key",
-            "in": "query"
-          },
-          {
-            "required": true,
-            "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
             },
@@ -3433,84 +3444,12 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
-              "title": "Intraday interval",
-              "anyOf": [
-                {
-                  "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
-                }
-              ]
+              "title": "API access key",
+              "type": "string"
             },
-            "example": "5min",
-            "name": "interval",
-            "in": "query"
-          },
-          {
-            "required": false,
-            "schema": {
-              "title": "Date/time sort order",
-              "anyOf": [
-                {
-                  "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            "example": "DESC",
-            "name": "sort",
-            "in": "query"
-          },
-          {
-            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
-            "required": false,
-            "schema": {
-              "title": "Timestamp",
-              "type": "string",
-              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
-            },
-            "example": "2022-11-03T00:00:00+0000",
-            "name": "date_from",
-            "in": "query"
-          },
-          {
-            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
-            "required": false,
-            "schema": {
-              "title": "Timestamp",
-              "type": "string",
-              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
-            },
-            "example": "2022-11-03T00:00:00+0000",
-            "name": "date_to",
-            "in": "query"
-          },
-          {
-            "required": false,
-            "schema": {
-              "title": "Limit",
-              "maximum": 1000.0,
-              "minimum": 1.0,
-              "type": "integer"
-            },
-            "example": 10,
-            "name": "limit",
-            "in": "query"
-          },
-          {
-            "required": false,
-            "schema": {
-              "title": "Offset",
-              "minimum": 0.0,
-              "type": "integer"
-            },
-            "example": 0,
-            "name": "offset",
+            "name": "access_key",
             "in": "query"
           }
         ],
@@ -3601,15 +3540,6 @@
           {
             "required": true,
             "schema": {
-              "title": "API access key",
-              "type": "string"
-            },
-            "name": "access_key",
-            "in": "query"
-          },
-          {
-            "required": true,
-            "schema": {
               "title": "Comma-separated symbols list",
               "type": "string"
             },
@@ -3618,84 +3548,12 @@
             "in": "query"
           },
           {
-            "required": false,
+            "required": true,
             "schema": {
-              "title": "Intraday interval",
-              "anyOf": [
-                {
-                  "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
-                }
-              ]
+              "title": "API access key",
+              "type": "string"
             },
-            "example": "5min",
-            "name": "interval",
-            "in": "query"
-          },
-          {
-            "required": false,
-            "schema": {
-              "title": "Date/time sort order",
-              "anyOf": [
-                {
-                  "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            "example": "DESC",
-            "name": "sort",
-            "in": "query"
-          },
-          {
-            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
-            "required": false,
-            "schema": {
-              "title": "Timestamp",
-              "type": "string",
-              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
-            },
-            "example": "2022-11-03T00:00:00+0000",
-            "name": "date_from",
-            "in": "query"
-          },
-          {
-            "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z",
-            "required": false,
-            "schema": {
-              "title": "Timestamp",
-              "type": "string",
-              "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
-            },
-            "example": "2022-11-03T00:00:00+0000",
-            "name": "date_to",
-            "in": "query"
-          },
-          {
-            "required": false,
-            "schema": {
-              "title": "Limit",
-              "maximum": 1000.0,
-              "minimum": 1.0,
-              "type": "integer"
-            },
-            "example": 10,
-            "name": "limit",
-            "in": "query"
-          },
-          {
-            "required": false,
-            "schema": {
-              "title": "Offset",
-              "minimum": 0.0,
-              "type": "integer"
-            },
-            "example": 0,
-            "name": "offset",
+            "name": "access_key",
             "in": "query"
           }
         ],

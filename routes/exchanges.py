@@ -79,6 +79,7 @@ def mic_eod(
 def mic_eod_latest(
     mic: str = exchange_path,
     access_key: str = access_key_query,
+    symbols: str = symbols_query,
 ):
     pass
 
@@ -91,6 +92,7 @@ def mic_eod_latest(
 def mic_eod_date(
     mic: str = exchange_path,
     date: str = date_path,
+    symbols: str = symbols_query,
     access_key: str = access_key_query,
 ):
     pass
@@ -126,14 +128,8 @@ def mic_intraday(
 )
 def mic_intraday_latest(
     mic: str = exchange_path,
-    access_key: str = access_key_query,
     symbols: str = symbols_query,
-    interval: Interval | str = interval_query,
-    sort: Sort | str = sort_query,
-    date_from: str = date_query,
-    date_to: str = date_query,
-    limit: int = limit_query,
-    offset: int = offset_query,
+    access_key: str = access_key_query,
 ):
     pass
 
@@ -146,13 +142,7 @@ def mic_intraday_latest(
 def mic_intraday_date(
     mic: str = exchange_path,
     date: str = date_path,
-    access_key: str = access_key_query,
     symbols: str = symbols_query,
-    interval: Interval | str = interval_query,
-    sort: Sort | str = sort_query,
-    date_from: str = date_query,
-    date_to: str = date_query,
-    limit: int = limit_query,
-    offset: int = offset_query,
+    access_key: str = access_key_query,
 ):
     pass

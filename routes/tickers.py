@@ -62,7 +62,7 @@ def symbol_eod_latest(
 
 @router.get(
     "/{symbol}/eod/{date}",
-    response_model=Response[List[EodPrice]],
+    response_model=EodPrice,
     operation_id="ticker_symbol_eod_date"
 )
 def symbol_eod_date(

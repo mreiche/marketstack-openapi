@@ -1,5 +1,5 @@
 # marketstack-openapi
-Generated OpenAPI for [Marketstack](https://marketstack.com/documentation)
+Inofficial generated OpenAPI for [marketstack](https://marketstack.com/documentation) covered by [marketstack-python](https://github.com/mreiche/marketstack-python)
 
 ## Generate OpenAPI spec
 ```shell
