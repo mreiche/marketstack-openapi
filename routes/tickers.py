@@ -39,7 +39,7 @@ def symbol_eod(
     symbol: str = symbol_path,
     access_key: str = access_key_query,
     exchange: str = exchange_query,
-    sort: Sort = sort_query,
+    sort: Sort | str = sort_query,
     date_from: str = date_query,
     date_to: str = date_query,
     limit: int = limit_query,
@@ -86,8 +86,8 @@ def symbol_intraday(
     symbol: str = symbol_path,
     access_key: str = access_key_query,
     exchange: str = exchange_query,
-    sort: Sort = sort_query,
-    interval: Interval = interval_query,
+    sort: Sort | str = sort_query,
+    interval: Interval | str = interval_query,
     date_from: str = date_query,
     date_to: str = date_query,
     limit: int = limit_query,
@@ -129,7 +129,7 @@ def symbol_intraday_date(
 def symbol_splits(
     symbol: str = symbol_path,
     access_key: str = access_key_query,
-    sort: Sort = sort_query,
+    sort: Sort | str = sort_query,
     date_from: str = date_query,
     date_to: str = date_query,
 ):
@@ -144,7 +144,7 @@ def symbol_splits(
 def symbol_dividends(
     symbol: str = symbol_path,
     access_key: str = access_key_query,
-    sort: Sort = sort_query,
+    sort: Sort | str = sort_query,
     date_from: str = date_query,
     date_to: str = date_query,
 ):

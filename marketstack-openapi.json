@@ -47,9 +47,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -200,9 +203,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -365,9 +371,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -518,9 +527,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -532,9 +544,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -685,9 +700,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -699,9 +717,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -864,9 +885,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -878,9 +902,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -1021,9 +1048,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -1164,9 +1194,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -1703,9 +1736,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -2032,9 +2068,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -2046,9 +2085,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -2365,9 +2407,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -2485,9 +2530,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -2883,9 +2931,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -3212,9 +3263,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -3226,9 +3280,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -3379,9 +3436,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -3393,9 +3453,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -3558,9 +3621,12 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
@@ -3572,9 +3638,12 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "allOf": [
+              "anyOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
+                },
+                {
+                  "type": "string"
                 }
               ]
             },
