@@ -47,12 +47,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -203,12 +200,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -371,12 +365,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -527,12 +518,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -700,12 +688,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -885,12 +870,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -1048,12 +1030,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -1194,12 +1173,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -1736,12 +1712,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -2068,12 +2041,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -2407,12 +2377,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -2530,12 +2497,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -2931,12 +2895,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -3300,12 +3261,9 @@
             "required": false,
             "schema": {
               "title": "Date/time sort order",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Sort"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },

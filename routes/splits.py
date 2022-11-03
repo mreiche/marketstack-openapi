@@ -11,7 +11,7 @@ router = APIRouter(prefix="/splits", tags=["splits"])
 def query(
     access_key: str = access_key_query,
     symbols: str = symbols_query,
-    sort: Sort | str = sort_query,
+    sort: Sort = sort_query,
     date_from: str = date_query,
     date_to: str = date_query,
     limit: int = limit_query,

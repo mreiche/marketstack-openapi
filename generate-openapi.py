@@ -26,7 +26,7 @@ app.include_router(exchanges)
 openapi_schema = get_openapi(
     title="Marketstack OpenAPI",
     version="1.0",
-    description="Inofficial Marketstack OpenAPI spec",
+    description="Inofficial marketstack OpenAPI spec",
     routes=app.routes,
 )
 
