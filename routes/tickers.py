@@ -87,7 +87,7 @@ def symbol_intraday(
     access_key: str = access_key_query,
     exchange: str = exchange_query,
     sort: Sort = sort_query,
-    interval: Interval | str = interval_query,
+    interval: Interval = interval_query,
     date_from: str = date_query,
     date_to: str = date_query,
     limit: int = limit_query,

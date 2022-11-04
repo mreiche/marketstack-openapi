@@ -2,7 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Marketstack OpenAPI",
-    "description": "Inofficial Marketstack OpenAPI spec",
+    "description": "Inofficial marketstack OpenAPI spec",
     "version": "1.0"
   },
   "paths": {
@@ -532,12 +532,9 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -702,12 +699,9 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -884,12 +878,9 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -2055,12 +2046,9 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },
@@ -3244,12 +3232,9 @@
             "required": false,
             "schema": {
               "title": "Intraday interval",
-              "anyOf": [
+              "allOf": [
                 {
                   "$ref": "#/components/schemas/Interval"
-                },
-                {
-                  "type": "string"
                 }
               ]
             },

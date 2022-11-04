@@ -111,7 +111,7 @@ def mic_intraday(
     mic: str = exchange_path,
     access_key: str = access_key_query,
     symbols: str = symbols_query,
-    interval: Interval | str = interval_query,
+    interval: Interval = interval_query,
     sort: Sort = sort_query,
     date_from: str = date_query,
     date_to: str = date_query,
