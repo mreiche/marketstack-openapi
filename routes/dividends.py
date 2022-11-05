@@ -2,12 +2,12 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, symbols_query, sort_query, Sort, limit_query, date_query, Response, Dividend, offset_query
+from models import access_key_query, symbols_query, sort_query, Sort, limit_query, date_query, PagedResponse, Dividend, offset_query
 
 router = APIRouter(prefix="/dividends", tags=["dividends"])
 
 
-@router.get("", response_model=Response[List[Dividend]], operation_id="dividends")
+@router.get("", response_model=PagedResponse[List[Dividend]], operation_id="dividends")
 def query(
     access_key: str = access_key_query,
     symbols: str = symbols_query,

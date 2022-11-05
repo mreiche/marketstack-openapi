@@ -2,12 +2,12 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path, offset_query, TickerBase
+from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, PagedResponse, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path, offset_query, TickerBase
 
 router = APIRouter(prefix="/tickers", tags=["tickers"])
 
 
-@router.get("", response_model=Response[List[Ticker]], operation_id="tickers")
+@router.get("", response_model=PagedResponse[List[Ticker]], operation_id="tickers")
 def query(
     access_key: str = access_key_query,
     exchange: str = exchange_query,
@@ -32,7 +32,7 @@ class TickerEod(TickerBase):
 
 @router.get(
     "/{symbol}/eod",
-    response_model=Response[TickerEod],
+    response_model=PagedResponse[TickerEod],
     operation_id="ticker_symbol_eod"
 )
 def symbol_eod(
@@ -79,7 +79,7 @@ class TickerIntraday(TickerBase):
 
 @router.get(
     "/{symbol}/intraday",
-    response_model=Response[TickerIntraday],
+    response_model=PagedResponse[TickerIntraday],
     operation_id="ticker_symbol_intraday"
 )
 def symbol_intraday(
@@ -110,7 +110,7 @@ def symbol_intraday_latest(
 
 @router.get(
     "/{symbol}/intraday/{date}",
-    response_model=Response[List[IntervalPrice]],
+    response_model=PagedResponse[List[IntervalPrice]],
     operation_id="ticker_symbol_intraday_date"
 )
 def symbol_intraday_date(
@@ -123,7 +123,7 @@ def symbol_intraday_date(
 
 @router.get(
     "/{symbol}/splits",
-    response_model=Response[List[Split]],
+    response_model=PagedResponse[List[Split]],
     operation_id="ticker_symbol_splits"
 )
 def symbol_splits(
@@ -138,7 +138,7 @@ def symbol_splits(
 
 @router.get(
     "/{symbol}/dividends",
-    response_model=Response[List[Dividend]],
+    response_model=PagedResponse[List[Dividend]],
     operation_id="ticker_symbol_dividends"
 )
 def symbol_dividends(

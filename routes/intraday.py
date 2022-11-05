@@ -2,12 +2,12 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, symbols_query, exchange_query, sort_query, Sort, Interval, limit_query, date_query, interval_query, date_path, Response, IntervalPrice, offset_query
+from models import access_key_query, symbols_query, exchange_query, sort_query, Sort, Interval, limit_query, date_query, interval_query, date_path, PagedResponse, IntervalPrice, offset_query
 
 router = APIRouter(prefix="/intraday", tags=["intraday"])
 
 
-@router.get("", response_model=Response[List[IntervalPrice]], operation_id="intraday")
+@router.get("", response_model=PagedResponse[List[IntervalPrice]], operation_id="intraday")
 def query(
     access_key: str = access_key_query,
     symbols: str = symbols_query,
@@ -22,7 +22,7 @@ def query(
     pass
 
 
-@router.get("/latest", response_model=Response[List[IntervalPrice]], operation_id="intraday_latest")
+@router.get("/latest", response_model=PagedResponse[List[IntervalPrice]], operation_id="intraday_latest")
 def latest(
     access_key: str = access_key_query,
     symbols: str = symbols_query,
@@ -37,7 +37,7 @@ def latest(
     pass
 
 
-@router.get("/{date}", response_model=Response[List[IntervalPrice]], operation_id="intraday_date")
+@router.get("/{date}", response_model=PagedResponse[List[IntervalPrice]], operation_id="intraday_date")
 def date(
     date: str = date_path,
     access_key: str = access_key_query,

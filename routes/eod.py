@@ -2,12 +2,12 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, symbols_query, exchange_query, sort_query, Sort, limit_query, date_query, date_path, Response, EodPrice, offset_query
+from models import access_key_query, symbols_query, exchange_query, sort_query, Sort, limit_query, date_query, date_path, PagedResponse, EodPrice, offset_query
 
 router = APIRouter(prefix="/eod", tags=["eod"])
 
 
-@router.get("", response_model=Response[List[EodPrice]], operation_id="eod")
+@router.get("", response_model=PagedResponse[List[EodPrice]], operation_id="eod")
 def query(
     access_key: str = access_key_query,
     symbols: str = symbols_query,
@@ -21,7 +21,7 @@ def query(
     pass
 
 
-@router.get("/latest", response_model=Response[List[EodPrice]], operation_id="eod_latest")
+@router.get("/latest", response_model=PagedResponse[List[EodPrice]], operation_id="eod_latest")
 def latest(
     access_key: str = access_key_query,
     symbols: str = symbols_query,
@@ -35,7 +35,7 @@ def latest(
     pass
 
 
-@router.get("/{date}", response_model=Response[List[EodPrice]], operation_id="eod_date")
+@router.get("/{date}", response_model=PagedResponse[List[EodPrice]], operation_id="eod_date")
 def date(
     date: str = date_path,
     access_key: str = access_key_query,

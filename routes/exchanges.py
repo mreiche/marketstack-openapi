@@ -3,12 +3,12 @@ from typing import List
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from models import access_key_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, IntervalPrice, Interval, interval_query, date_path, Exchange, exchange_path, symbols_query, offset_query, ExchangeBase
+from models import access_key_query, sort_query, Sort, limit_query, date_query, PagedResponse, EodPrice, search_query, IntervalPrice, Interval, interval_query, date_path, Exchange, exchange_path, symbols_query, offset_query, ExchangeBase
 
 router = APIRouter(prefix="/exchanges", tags=["exchanges"])
 
 
-@router.get("", response_model=Response[List[Exchange]], operation_id="exchanges")
+@router.get("", response_model=PagedResponse[List[Exchange]], operation_id="exchanges")
 def query(
     access_key: str = access_key_query,
     search: str = search_query,
@@ -39,7 +39,7 @@ class ExchangeTickers(ExchangeBase):
 
 @router.get(
     "/{mic}/tickers",
-    response_model=Response[ExchangeTickers],
+    response_model=PagedResponse[ExchangeTickers],
     operation_id="exchange_mic_tickers"
 )
 def tickers(
@@ -55,7 +55,7 @@ class ExchangeEod(ExchangeBase):
 
 @router.get(
     "/{mic}/eod",
-    response_model=Response[ExchangeEod],
+    response_model=PagedResponse[ExchangeEod],
     operation_id="exchange_mic_eod"
 )
 def mic_eod(
@@ -73,7 +73,7 @@ def mic_eod(
 
 @router.get(
     "/{mic}/eod/latest",
-    response_model=Response[ExchangeEod],
+    response_model=PagedResponse[ExchangeEod],
     operation_id="exchange_mic_eod_latest"
 )
 def mic_eod_latest(
@@ -86,7 +86,7 @@ def mic_eod_latest(
 
 @router.get(
     "/{mic}/eod/{date}",
-    response_model=Response[ExchangeEod],
+    response_model=PagedResponse[ExchangeEod],
     operation_id="exchange_mic_eod_date"
 )
 def mic_eod_date(
@@ -104,7 +104,7 @@ class ExchangeIntraday(ExchangeBase):
 
 @router.get(
     "/{mic}/intraday",
-    response_model=Response[ExchangeIntraday],
+    response_model=PagedResponse[ExchangeIntraday],
     operation_id="exchange_mic_intraday"
 )
 def mic_intraday(
@@ -123,7 +123,7 @@ def mic_intraday(
 
 @router.get(
     "/{mic}/intraday/latest",
-    response_model=Response[ExchangeIntraday],
+    response_model=PagedResponse[ExchangeIntraday],
     operation_id="exchange_mic_intraday_latest"
 )
 def mic_intraday_latest(
@@ -136,7 +136,7 @@ def mic_intraday_latest(
 
 @router.get(
     "/{mic}/intraday/{date}",
-    response_model=Response[ExchangeIntraday],
+    response_model=PagedResponse[ExchangeIntraday],
     operation_id="exchange_mic_intraday_date"
 )
 def mic_intraday_date(

@@ -2,12 +2,12 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, symbols_query, sort_query, Sort, limit_query, date_query, Response, Split, offset_query
+from models import access_key_query, symbols_query, sort_query, Sort, limit_query, date_query, PagedResponse, Split, offset_query
 
 router = APIRouter(prefix="/splits", tags=["splits"])
 
 
-@router.get("", response_model=Response[List[Split]], operation_id="splits")
+@router.get("", response_model=PagedResponse[List[Split]], operation_id="splits")
 def query(
     access_key: str = access_key_query,
     symbols: str = symbols_query,

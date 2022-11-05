@@ -36,10 +36,9 @@ class Error(BaseModel):
     context: dict | None
 
 
-class Response(GenericModel, Generic[R]):
-    pagination: Pagination | None
-    data: R | None
-    error: Error | None
+class PagedResponse(GenericModel, Generic[R]):
+    pagination: Pagination
+    data: R
 
 
 class ErrorResponse(BaseModel):

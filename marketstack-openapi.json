@@ -111,7 +111,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.EodPrice__"
                 }
               }
             }
@@ -264,7 +264,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.EodPrice__"
                 }
               }
             }
@@ -429,7 +429,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.EodPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.EodPrice__"
                 }
               }
             }
@@ -596,7 +596,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.IntervalPrice__"
                 }
               }
             }
@@ -763,7 +763,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.IntervalPrice__"
                 }
               }
             }
@@ -942,7 +942,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.IntervalPrice__"
                 }
               }
             }
@@ -1085,7 +1085,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Split__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Split__"
                 }
               }
             }
@@ -1228,7 +1228,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Dividend__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Dividend__"
                 }
               }
             }
@@ -1323,7 +1323,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Currency__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Currency__"
                 }
               }
             }
@@ -1418,7 +1418,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Timezone__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Timezone__"
                 }
               }
             }
@@ -1532,7 +1532,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Ticker__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Ticker__"
                 }
               }
             }
@@ -1767,7 +1767,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_TickerEod_"
+                  "$ref": "#/components/schemas/PagedResponse_TickerEod_"
                 }
               }
             }
@@ -2110,7 +2110,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_TickerIntraday_"
+                  "$ref": "#/components/schemas/PagedResponse_TickerIntraday_"
                 }
               }
             }
@@ -2286,7 +2286,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.IntervalPrice__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.IntervalPrice__"
                 }
               }
             }
@@ -2406,7 +2406,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Split__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Split__"
                 }
               }
             }
@@ -2526,7 +2526,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Dividend__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Dividend__"
                 }
               }
             }
@@ -2630,7 +2630,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_List_models.Exchange__"
+                  "$ref": "#/components/schemas/PagedResponse_List_models.Exchange__"
                 }
               }
             }
@@ -2794,7 +2794,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeTickers_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeTickers_"
                 }
               }
             }
@@ -2947,7 +2947,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeEod_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeEod_"
                 }
               }
             }
@@ -3039,7 +3039,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeEod_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeEod_"
                 }
               }
             }
@@ -3143,7 +3143,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeEod_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeEod_"
                 }
               }
             }
@@ -3310,7 +3310,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeIntraday_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeIntraday_"
                 }
               }
             }
@@ -3402,7 +3402,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeIntraday_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeIntraday_"
                 }
               }
             }
@@ -3506,7 +3506,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Response_ExchangeIntraday_"
+                  "$ref": "#/components/schemas/PagedResponse_ExchangeIntraday_"
                 }
               }
             }
@@ -4113,6 +4113,246 @@
         ],
         "description": "An enumeration."
       },
+      "PagedResponse_ExchangeEod_": {
+        "title": "PagedResponse[ExchangeEod]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ExchangeEod"
+          }
+        }
+      },
+      "PagedResponse_ExchangeIntraday_": {
+        "title": "PagedResponse[ExchangeIntraday]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ExchangeIntraday"
+          }
+        }
+      },
+      "PagedResponse_ExchangeTickers_": {
+        "title": "PagedResponse[ExchangeTickers]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ExchangeTickers"
+          }
+        }
+      },
+      "PagedResponse_List_models.Currency__": {
+        "title": "PagedResponse[List[models.Currency]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Currency"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.Dividend__": {
+        "title": "PagedResponse[List[models.Dividend]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Dividend"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.EodPrice__": {
+        "title": "PagedResponse[List[models.EodPrice]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EodPrice"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.Exchange__": {
+        "title": "PagedResponse[List[models.Exchange]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Exchange"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.IntervalPrice__": {
+        "title": "PagedResponse[List[models.IntervalPrice]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IntervalPrice"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.Split__": {
+        "title": "PagedResponse[List[models.Split]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Split"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.Ticker__": {
+        "title": "PagedResponse[List[models.Ticker]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ticker"
+            }
+          }
+        }
+      },
+      "PagedResponse_List_models.Timezone__": {
+        "title": "PagedResponse[List[models.Timezone]]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "title": "Data",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Timezone"
+            }
+          }
+        }
+      },
+      "PagedResponse_TickerEod_": {
+        "title": "PagedResponse[TickerEod]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "$ref": "#/components/schemas/TickerEod"
+          }
+        }
+      },
+      "PagedResponse_TickerIntraday_": {
+        "title": "PagedResponse[TickerIntraday]",
+        "required": [
+          "pagination",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "data": {
+            "$ref": "#/components/schemas/TickerIntraday"
+          }
+        }
+      },
       "Pagination": {
         "title": "Pagination",
         "required": [
@@ -4138,233 +4378,6 @@
           "total": {
             "title": "Total",
             "type": "integer"
-          }
-        }
-      },
-      "Response_ExchangeEod_": {
-        "title": "Response[ExchangeEod]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "$ref": "#/components/schemas/ExchangeEod"
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_ExchangeIntraday_": {
-        "title": "Response[ExchangeIntraday]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "$ref": "#/components/schemas/ExchangeIntraday"
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_ExchangeTickers_": {
-        "title": "Response[ExchangeTickers]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "$ref": "#/components/schemas/ExchangeTickers"
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.Currency__": {
-        "title": "Response[List[models.Currency]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Currency"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.Dividend__": {
-        "title": "Response[List[models.Dividend]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Dividend"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.EodPrice__": {
-        "title": "Response[List[models.EodPrice]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EodPrice"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.Exchange__": {
-        "title": "Response[List[models.Exchange]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Exchange"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.IntervalPrice__": {
-        "title": "Response[List[models.IntervalPrice]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IntervalPrice"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.Split__": {
-        "title": "Response[List[models.Split]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Split"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.Ticker__": {
-        "title": "Response[List[models.Ticker]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Ticker"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_List_models.Timezone__": {
-        "title": "Response[List[models.Timezone]]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "title": "Data",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Timezone"
-            }
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_TickerEod_": {
-        "title": "Response[TickerEod]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "$ref": "#/components/schemas/TickerEod"
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          }
-        }
-      },
-      "Response_TickerIntraday_": {
-        "title": "Response[TickerIntraday]",
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
-          "data": {
-            "$ref": "#/components/schemas/TickerIntraday"
-          },
-          "error": {
-            "$ref": "#/components/schemas/Error"
           }
         }
       },
