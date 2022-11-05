@@ -3751,9 +3751,7 @@
           "country",
           "country_code",
           "city",
-          "website",
-          "currency",
-          "timezone"
+          "website"
         ],
         "type": "object",
         "properties": {
@@ -3786,10 +3784,26 @@
             "type": "string"
           },
           "currency": {
-            "$ref": "#/components/schemas/Currency"
+            "title": "Currency",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Currency"
+              },
+              {
+                "$ref": "#/components/schemas/Nullable"
+              }
+            ]
           },
           "timezone": {
-            "$ref": "#/components/schemas/Timezone"
+            "title": "Timezone",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Timezone"
+              },
+              {
+                "$ref": "#/components/schemas/Nullable"
+              }
+            ]
           }
         }
       },
@@ -4091,6 +4105,13 @@
             "type": "number"
           }
         }
+      },
+      "Nullable": {
+        "title": "Nullable",
+        "enum": [
+          null
+        ],
+        "description": "An enumeration."
       },
       "Pagination": {
         "title": "Pagination",

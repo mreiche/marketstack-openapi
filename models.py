@@ -3,7 +3,7 @@ from enum import Enum
 from typing import Generic, List, TypeVar
 
 from fastapi import Path, Query, status
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, BaseConfig
 from pydantic.generics import GenericModel
 
 R = TypeVar("R")
@@ -120,10 +120,15 @@ class ExchangeBase(BaseModel):
     website: str
 
 
+# Workaround for https://github.com/pydantic/pydantic/issues/1270
+class Nullable(Enum):
+    null = None
+
+
 class Exchange(ExchangeBase):
     country_code: str
-    currency: Currency
-    timezone: Timezone
+    currency: Currency | Nullable | None
+    timezone: Timezone | Nullable | None
 
 
 class TickerBase(BaseModel):
