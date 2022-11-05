@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from models import access_key_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, IntervalPrice, Interval, interval_query, date_path, Exchange, exchange_path, symbols_query, offset_query
+from models import access_key_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, IntervalPrice, Interval, interval_query, date_path, Exchange, exchange_path, symbols_query, offset_query, ExchangeBase
 
 router = APIRouter(prefix="/exchanges", tags=["exchanges"])
 
@@ -33,7 +33,7 @@ class ExchangeSymbol(BaseModel):
     has_eod: bool
 
 
-class ExchangeTickers(Exchange):
+class ExchangeTickers(ExchangeBase):
     tickers: List[ExchangeSymbol]
 
 
@@ -49,7 +49,7 @@ def tickers(
     pass
 
 
-class ExchangeEod(Exchange):
+class ExchangeEod(ExchangeBase):
     eod: List[EodPrice]
 
 
@@ -98,7 +98,7 @@ def mic_eod_date(
     pass
 
 
-class ExchangeIntraday(Exchange):
+class ExchangeIntraday(ExchangeBase):
     intraday: List[IntervalPrice]
 
 

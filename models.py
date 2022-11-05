@@ -110,7 +110,7 @@ class Timezone(BaseModel):
     abbr_dst: str
 
 
-class Exchange(BaseModel):
+class ExchangeBase(BaseModel):
     name: str
     acronym: str
     mic: str
@@ -118,17 +118,24 @@ class Exchange(BaseModel):
     country_code: str | None
     city: str
     website: str
-    currency: Currency | None
-    timezone: Timezone | None
 
 
-class Ticker(BaseModel):
+class Exchange(ExchangeBase):
+    country_code: str
+    currency: Currency
+    timezone: Timezone
+
+
+class TickerBase(BaseModel):
     name: str
     symbol: str
-    stock_exchange: Exchange | None
-    timezone: Timezone | None
     has_intraday: bool
     has_eod: bool
+    country: str
+
+
+class Ticker(TickerBase):
+    stock_exchange: ExchangeBase
 
 
 date_description = "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"

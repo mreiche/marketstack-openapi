@@ -2,7 +2,7 @@ from typing import List
 
 from fastapi import APIRouter
 
-from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path, offset_query
+from models import access_key_query, exchange_query, sort_query, Sort, limit_query, date_query, Response, EodPrice, search_query, symbol_path, Ticker, Split, IntervalPrice, Interval, interval_query, Dividend, date_path, offset_query, TickerBase
 
 router = APIRouter(prefix="/tickers", tags=["tickers"])
 
@@ -26,7 +26,7 @@ def symbol(
     pass
 
 
-class TickerEod(Ticker):
+class TickerEod(TickerBase):
     eod: List[EodPrice]
 
 
@@ -73,7 +73,7 @@ def symbol_eod_date(
     pass
 
 
-class TickerIntraday(Ticker):
+class TickerIntraday(TickerBase):
     intraday: List[IntervalPrice]
 
 
