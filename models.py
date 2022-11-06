@@ -160,7 +160,9 @@ offset_query = Query(None, ge=0, example=0)
 exchange_path = Path(title="Exchange MIC", example="XNAS")
 
 responses = {
+    status.HTTP_401_UNAUTHORIZED: {"model": ErrorResponse, "description": "Unauthorized"},
     status.HTTP_403_FORBIDDEN: {"model": ErrorResponse, "description": "Forbidden"},
     status.HTTP_404_NOT_FOUND: {"model": ErrorResponse, "description": "Not found"},
     status.HTTP_429_TOO_MANY_REQUESTS: {"model": ErrorResponse, "description": "Too many requests"},
+    status.HTTP_500_INTERNAL_SERVER_ERROR: {"model": ErrorResponse, "description": "Internal Server error"}
 }
