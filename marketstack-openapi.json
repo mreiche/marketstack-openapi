@@ -65,7 +65,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -77,7 +77,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -116,6 +116,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -138,6 +148,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -218,7 +238,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -230,7 +250,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -269,6 +289,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -291,6 +321,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -328,7 +368,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date",
             "in": "path"
           },
@@ -383,7 +423,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -395,7 +435,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -434,6 +474,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -456,6 +506,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -550,7 +610,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -562,7 +622,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -601,6 +661,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -623,6 +693,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -717,7 +797,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -729,7 +809,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -768,6 +848,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -790,6 +880,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -827,7 +927,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date",
             "in": "path"
           },
@@ -896,7 +996,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -908,7 +1008,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -947,6 +1047,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -969,6 +1079,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1039,7 +1159,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -1051,7 +1171,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -1090,6 +1210,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1112,6 +1242,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1182,7 +1322,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -1194,7 +1334,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -1233,6 +1373,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1255,6 +1405,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1328,6 +1488,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1350,6 +1520,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1423,6 +1603,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1445,6 +1635,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1537,6 +1737,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1559,6 +1769,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1619,6 +1839,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1641,6 +1871,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1721,7 +1961,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -1733,7 +1973,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -1772,6 +2012,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1794,6 +2044,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1854,6 +2114,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -1876,6 +2146,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1923,7 +2203,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date",
             "in": "path"
           },
@@ -1944,6 +2224,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EodPrice"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1970,6 +2260,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2064,7 +2364,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -2076,7 +2376,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -2115,6 +2415,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2137,6 +2447,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2197,6 +2517,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2219,6 +2549,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2266,7 +2606,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date",
             "in": "path"
           },
@@ -2287,6 +2627,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PagedResponse_List_models.IntervalPrice__"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2313,6 +2663,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2383,7 +2743,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -2395,7 +2755,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           }
@@ -2407,6 +2767,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PagedResponse_List_models.Split__"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2433,6 +2803,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2503,7 +2883,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -2515,7 +2895,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           }
@@ -2527,6 +2907,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PagedResponse_List_models.Dividend__"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2553,6 +2943,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2635,6 +3035,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2657,6 +3067,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2717,6 +3137,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2739,6 +3169,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2799,6 +3239,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2821,6 +3271,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2901,7 +3361,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -2913,7 +3373,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -2952,6 +3412,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2974,6 +3444,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -3044,6 +3524,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -3066,6 +3556,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -3113,7 +3613,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date",
             "in": "path"
           },
@@ -3148,6 +3648,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -3170,6 +3680,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -3264,7 +3784,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_from",
             "in": "query"
           },
@@ -3276,7 +3796,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date_to",
             "in": "query"
           },
@@ -3315,6 +3835,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -3337,6 +3867,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -3407,6 +3947,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -3429,6 +3979,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
@@ -3476,7 +4036,7 @@
               "type": "string",
               "description": "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
             },
-            "example": "2022-11-05T00:00:00+0000",
+            "example": "2022-11-06T00:00:00+0000",
             "name": "date",
             "in": "path"
           },
@@ -3511,6 +4071,16 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -3533,6 +4103,16 @@
           },
           "429": {
             "description": "Too many requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error",
             "content": {
               "application/json": {
                 "schema": {
