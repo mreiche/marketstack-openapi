@@ -1,9 +1,9 @@
 from datetime import datetime
 from enum import Enum
-from typing import Generic, List, TypeVar
+from typing import Generic, TypeVar
 
 from fastapi import Path, Query, status
-from pydantic import BaseModel, Field, BaseConfig
+from pydantic import BaseModel
 from pydantic.generics import GenericModel
 
 R = TypeVar("R")
@@ -23,7 +23,8 @@ class ErrorCode(Enum):
     inactive_user = "inactive_user"
     https_access_restricted = "https_access_restricted"
     invalid_api_function = "invalid_api_function"
-    not_found = "404_not_found"
+    not_found_404 = "404_not_found"
+    not_found = "not_found_error"
     usage_limit_reached = "usage_limit_reached"
     rate_limit_reached = "rate_limit_reached"
     internal_error = "internal_error"
@@ -144,7 +145,7 @@ class Ticker(TickerBase):
 
 date_description = "Date in the formats %Y-%m-%d, %Y-%m-%d %H:%M:%S or ISO-8601 %Y-%m-%dT%H:%M:%S+%Z"
 
-reference_time = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
+reference_time = datetime.today().replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0)
 formatted_reference_time = reference_time.isoformat()+"+0000"
 symbol_path = Path(title="Symbol", example="AAPL")
 date_path = Path(title="Timestamp", description=date_description, example=formatted_reference_time)
